@@ -62,7 +62,7 @@ export const Pricing = () => {
       />
       <div className="pt-10 gap-6 flex flex-col items-center justify-center lg:flex-row lg:items-end">
         <PricingCard data={pricingTiers[0]} />
-        <PricingCard data={pricingTiers[1]} />
+        <PricingCard popular data={pricingTiers[1]} />
         <PricingCard data={pricingTiers[2]} />
       </div>
     </section>
