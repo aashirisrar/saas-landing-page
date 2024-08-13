@@ -10,9 +10,9 @@ import noodeImage from "@/public/assets/noodle.png";
 
 export const Hero = () => {
   return (
-    <section className="lg:px-20 px-5 pt-8 md:pt-5 pb-20 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
+    <section className="xl:px-96 lg:px-20 px-5 pt-8 md:pt-5 pb-20 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
       <div className="md:flex items-center">
-        <div className="w-[478px]">
+        <div className="md:w-[478px]">
           <Tag title="Version 2.0 is here" />
           <div className="flex flex-col gap-6 pt-6">
             <div className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">

@@ -20,7 +20,7 @@ const Navbar = () => {
           <BsArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
         </div>
       </div>
-      <div className="p-5 lg:px-20">
+      <div className="xl:px-96 p-5 lg:px-20">
         <div className="flex items-center justify-between">
           <Image src={Logo} alt="Saas Logo" height={40} width={40} />
           <BiMenu className="h-5 w-5 md:hidden" />
