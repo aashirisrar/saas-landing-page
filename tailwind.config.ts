@@ -15,6 +15,9 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    'container',
+  ],
   plugins: [],
 };
 export default config;
