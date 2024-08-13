@@ -1,3 +1,6 @@
+import Heading from "@/components/Heading";
+import PricingCard from "@/components/PricingCard";
+
 const pricingTiers = [
   {
     title: "Free",
@@ -51,5 +54,17 @@ const pricingTiers = [
 ];
 
 export const Pricing = () => {
-  return null;
+  return (
+    <section className="xl:px-96 lg:px-20 py-[96px] px-5 bg-white">
+      <Heading
+        heading="Pricing"
+        subHeading="Free forever. Upgrade for unlimited tasks,  better security, and exclusive features."
+      />
+      <div className="pt-10 gap-6 flex flex-col items-center justify-center lg:flex-row lg:items-end">
+        <PricingCard data={pricingTiers[0]} />
+        <PricingCard data={pricingTiers[1]} />
+        <PricingCard data={pricingTiers[2]} />
+      </div>
+    </section>
+  );
 };
