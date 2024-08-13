@@ -6,10 +6,11 @@ import { BiMenu } from "react-icons/bi";
 import Link from "next/link";
 
 import Logo from "@/public/assets/logosaas.png";
+import Button from "@/components/Button";
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 z-20 backdrop-blur-sm">
       <div className="flex justify-center items-center text-white bg-black py-3 text-sm gap-3">
         <p className="text-white/60 hidden md:block">
           Streamline your workflow and boost your productivity
@@ -29,9 +30,7 @@ const Navbar = () => {
             <Link href="#">Customers</Link>
             <Link href="#">Updates</Link>
             <Link href="#">Help</Link>
-            <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
-              Get for free
-            </button>
+            <Button title="Get for free" onClick={() => {}} />
           </nav>
         </div>
       </div>
