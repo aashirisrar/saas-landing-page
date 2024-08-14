@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import Button from "@/components/Button";
 import Tag from "@/components/Tag";
@@ -35,10 +36,19 @@ export const Hero = () => {
           </div>
         </div>
         <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
-          <Image
+          <motion.img
             alt="cog image"
-            src={cogImage}
+            src={cogImage.src}
             className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
+            animate={{
+              translateY: [-30, 30],
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "mirror",
+              duration: 2,
+              ease: "easeInOut",
+            }}
           />
           <Image
             src={cylinderImage}
