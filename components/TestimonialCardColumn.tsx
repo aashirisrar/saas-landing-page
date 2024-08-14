@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import React from "react";
+import { motion } from "framer-motion";
 
 interface TestimonialCardColumnProps {
+  className?: string;
   testimonials: {
     text: string;
     imageSrc: any;
@@ -13,35 +16,53 @@ interface TestimonialCardColumnProps {
 
 const TestimonialCardColumn: React.FC<TestimonialCardColumnProps> = ({
   testimonials,
+  className,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center pt-10 gap-6">
-      {testimonials.map((testimonial) => (
-        <div
-          key={testimonial.username}
-          className="shadow-md w-[325px] p-10 border border-[#222222]/10 rounded-3xl"
-        >
-          <div>{testimonial.text}</div>
-          <div className="pt-[20px] flex gap-3">
-            <div className="relative min-h-[40px] min-w-[40px]">
-              <Image
-                alt={testimonial.username}
-                fill
-                src={testimonial?.imageSrc}
-                className="object-cover"
-              />
-            </div>
-            <div className="flex flex-col">
-              <div className="font-medium leading-[20px] tracking-tight">
-                {testimonial.name}
+    <div className={className}>
+      <motion.div
+        animate={{
+          translateY: "-50%",
+        }}
+        transition={{
+          repeat: Infinity,
+          ease: "linear",
+          repeatType: "loop",
+          duration: 10,
+        }}
+        className="flex flex-col gap-6"
+      >
+        {[...new Array(2)].fill(0).map((_, index) => (
+          <React.Fragment key={index}>
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.username}
+                className="shadow-md w-[325px] p-10 border border-[#222222]/10 rounded-3xl"
+              >
+                <div>{testimonial.text}</div>
+                <div className="pt-[20px] flex gap-3">
+                  <div className="relative min-h-[40px] min-w-[40px]">
+                    <Image
+                      alt={testimonial.username}
+                      fill
+                      src={testimonial?.imageSrc}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="font-medium leading-[20px] tracking-tight">
+                      {testimonial.name}
+                    </div>
+                    <div className="leading-[20px] tracking-tight">
+                      {testimonial.username}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="leading-[20px] tracking-tight">
-                {testimonial.username}
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
+            ))}
+          </React.Fragment>
+        ))}
+      </motion.div>
     </div>
   );
 };

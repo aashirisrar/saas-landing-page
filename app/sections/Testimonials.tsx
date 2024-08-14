@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import Heading from "@/components/Heading";
 import TestimonialCardColumn from "@/components/TestimonialCardColumn";
 import avatar1 from "@/public/assets/avatar-1.png";
@@ -72,22 +76,22 @@ export const Testimonials = () => {
   const testimonialsColumnSecond = testimonials.slice(3, 6);
   const testimonialsColumnThird = testimonials.slice(6, 9);
   return (
-    <section className="bg-white xl:px-96 lg:px-20 px-5 lg:pb-[96px]">
+    <section className="bg-white px-5 lg:pb-[96px]">
       <Heading
         tagTitle="Testimonials"
         heading="What our users say"
         subHeading="From intuitive design to powerful features, our app has become an essential tool for users around the world."
       />
-      <div className="flex flex-row gap-6 items-center justify-center">
-        <div>
-          <TestimonialCardColumn testimonials={testimonialsColumnOne} />
-        </div>
-        <div className="hidden md:block">
-          <TestimonialCardColumn testimonials={testimonialsColumnSecond} />
-        </div>
-        <div className="hidden lg:block">
-          <TestimonialCardColumn testimonials={testimonialsColumnThird} />
-        </div>
+      <div className="flex flex-row gap-6 mt-10 justify-center [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
+        <TestimonialCardColumn testimonials={testimonialsColumnOne} />
+        <TestimonialCardColumn
+          className="hidden md:block"
+          testimonials={testimonialsColumnSecond}
+        />
+        <TestimonialCardColumn
+          className="hidden lg:block"
+          testimonials={testimonialsColumnThird}
+        />
       </div>
     </section>
   );
