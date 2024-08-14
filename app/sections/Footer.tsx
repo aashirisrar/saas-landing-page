@@ -14,8 +14,14 @@ export const Footer = () => {
   return (
     <section className="xl:px-96 lg:px-20 py-[40px] px-5 bg-black leading-5 text-[14px] text-[#BCBCBC]">
       <div className="flex flex-col items-center justify-center gap-6">
-        <div>
-          <Image alt="logo-footer" width={40} height={40} src={Logo} />
+        <div className="relative inline-flex before:content-[''] before:top-2 before:bottom-0 before:blur before:w-full before:bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] before:absolute">
+          <Image
+            alt="logo-footer"
+            className="relative"
+            width={40}
+            height={40}
+            src={Logo}
+          />
         </div>
         <div className="flex flex-col items-center justify-center gap-6 text-[14px] leading-[20px]">
           <Link href="#">About</Link>
