@@ -82,13 +82,18 @@ export const Testimonials = () => {
         heading="What our users say"
         subHeading="From intuitive design to powerful features, our app has become an essential tool for users around the world."
       />
-      <div className="flex flex-row gap-6 mt-10 justify-center [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
-        <TestimonialCardColumn testimonials={testimonialsColumnOne} />
+      <div className="h-[750px] flex flex-row gap-6 mt-10 justify-center [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
         <TestimonialCardColumn
+          movementDuration={15}
+          testimonials={testimonialsColumnOne}
+        />
+        <TestimonialCardColumn
+          movementDuration={19}
           className="hidden md:block"
           testimonials={testimonialsColumnSecond}
         />
         <TestimonialCardColumn
+          movementDuration={17}
           className="hidden lg:block"
           testimonials={testimonialsColumnThird}
         />

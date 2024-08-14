@@ -5,6 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 interface TestimonialCardColumnProps {
+  movementDuration?: number;
   className?: string;
   testimonials: {
     text: string;
@@ -17,6 +18,7 @@ interface TestimonialCardColumnProps {
 const TestimonialCardColumn: React.FC<TestimonialCardColumnProps> = ({
   testimonials,
   className,
+  movementDuration,
 }) => {
   return (
     <div className={className}>
@@ -25,12 +27,12 @@ const TestimonialCardColumn: React.FC<TestimonialCardColumnProps> = ({
           translateY: "-50%",
         }}
         transition={{
+          duration: movementDuration,
           repeat: Infinity,
           ease: "linear",
           repeatType: "loop",
-          duration: 10,
         }}
-        className="flex flex-col gap-6"
+        className="flex flex-col gap-6 pb-6"
       >
         {[...new Array(2)].fill(0).map((_, index) => (
           <React.Fragment key={index}>
