@@ -16,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="relative bg-[#EAEEFE]">
-      <body className={cn(dmSans.className, "antialiased")}>{children}</body>
+    <html lang="en" className="relative">
+      <body className={cn(dmSans.className, "antialiased bg-[#EAEEFE]")}>
+        {children}
+      </body>
     </html>
   );
 }
